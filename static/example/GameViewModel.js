@@ -13,9 +13,19 @@ GameViewModel.prototype.play = function () {
   location.assign("/connect/?redirect=" + location.href);
 };
 
+var flag = true;
+
 GameViewModel.prototype.move = function (d) {
-  this.circle_x(this.circle_x() + (d.x || 0));
-  this.circle_y(this.circle_y() + (d.y || 0));
+  var x = this.circle_x() + (d.x || 0);
+  var y = this.circle_y() + (d.y || 0);
+
+  if (x >= 500 && flag) {
+    
+    flag = false;
+  }
+
+  this.circle_x(x);
+  this.circle_y(y);
 };
 
 // interface

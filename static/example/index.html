@@ -15,25 +15,24 @@
   </div>
   <div class="container" data-bind="visible: true" style="display: none">
     <div data-bind="ifnot: connected">
-      <h2>丸を動かすだけのデモ</h2>
+      <h2>ADF2015 コードで自己紹介</h2>
       <p class="lead">下の Play ボタンを押して、スマホ接続ページに飛んで下さい。</p>
       <button data-bind="click: play" type="button" class="btn btn-primary btn-lg">Play!</button>
     </div>
     <div data-bind="if: connected">
       <div data-bind="visible: parent">
-        <h2>Movable Circle</h2>
+        <div class="background">
+          <p>中川 武憲</p>
+          <p>北海道科学大学 創生工学部 情報フロンティア工学科 3年</p>
+          <p>Web Developer</p>
+          <p class="zoi">今日も一日がんばるぞい！</p>
+        </div>
         <div data-bind="style: {left: (circle_x() + 'px'), top: (circle_y() + 'px')}" class="circle"></div>
       </div>
+
       <div data-bind="visible: ! parent()">
         <h2>Controller</h2>
-        <button data-bind="click: left" type="button" class="btn btn-success btn-lg">←</button>
-        <button data-bind="click: right" type="button" class="btn btn-success btn-lg">→</button>
-      </div>
-      <div class="alert alert-info info-foot">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <strong>Info:</strong>
-        終了する時は、ブラウザを閉じるかリロードして下さい。セッションが破棄されます。
-
+        <button data-bind="click: right" type="button" class="btn btn-success btn-lg">Go →</button>
       </div>
     </div>
   </div>

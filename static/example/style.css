@@ -18,3 +18,23 @@ body {
 .info-foot {
   margin-top: 100px;
 }
+
+/* ADF 2015 */
+.background {
+  color: #fff;
+  background-color: transparent;
+  z-index: 1;
+  position: relative;
+  margin: 60px;
+}
+
+.circle {
+  background-color: #000;
+  z-index: 0;
+  position: absolute;
+}
+
+.zoi {
+  margin-left: 400px;
+  margin-top: -50px;
+}
